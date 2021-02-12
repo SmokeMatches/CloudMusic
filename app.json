@@ -3,7 +3,13 @@
     "pages/login/login",
     "pages/profile/profile",
     "pages/index/index",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/eDRecommend/eDRecommend",
+    "pages/songDetail/songDetail",
+    "pages/search/search"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
   ],
   "window": {
     "backgroundTextStyle": "light",

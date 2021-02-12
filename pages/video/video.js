@@ -21,7 +21,9 @@ Page({
     this.getNavGroupList()
   },
   toSearch(){
-    console.log(1);
+    wx.navigateTo({
+      url: '/pages/search/search',
+    })
   },
   // 获取导航栏数据
   getNavGroupList(e){
@@ -161,6 +163,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title:'网易云小程序',
+      path:'/pages/video/video.js',
+    }
   }
 })

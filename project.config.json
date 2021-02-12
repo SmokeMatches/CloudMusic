@@ -12,7 +12,7 @@
     "minified": true,
     "newFeature": false,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": false,
     "scopeDataCheck": false,
@@ -35,12 +35,10 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.15.0",
+  "libVersion": "2.14.1",
   "appid": "wxcac689cc92c5a13c",
   "projectname": "%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90",
   "debugOptions": {
@@ -67,8 +65,14 @@
           "scene": null
         },
         {
-          "name": "pages/video/video",
-          "pathName": "pages/video/video",
+          "name": "pages/eDRecommend/eDRecommend",
+          "pathName": "pages/eDRecommend/eDRecommend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/eDRecommend/eDRecommend",
+          "pathName": "pages/eDRecommend/eDRecommend",
           "query": "",
           "scene": null
         }

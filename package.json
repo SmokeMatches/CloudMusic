@@ -1,0 +1,26 @@
+{
+  "name": "CloudMusic",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmokeMatches/CloudMusic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmokeMatches/CloudMusic/issues"
+  },
+  "homepage": "https://github.com/SmokeMatches/CloudMusic#readme",
+  "dependencies": {
+    "_pubsub-js@1.9.2@pubsub-js": "^1.9.2",
+    "moment": "^2.29.1",
+    "pubsub-js": "^1.9.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}

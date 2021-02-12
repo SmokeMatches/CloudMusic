@@ -1,0 +1,36 @@
+<view class="songDetailContainer">
+  <view class="author">{{song.ar[0].name}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay && 'needleRotate'}}" src="/images/needle.png"></image>
+
+  <view class="discContainer {{isPlay && 'discAnimation'}}">
+    <image class="disc" src="/images/disc.png"></image>
+    <image class="musicImg" src="{{song.al.picUrl}}"></image>
+  </view>
+
+  <!-- 进度条控制区域 -->
+  <view class="progressControl">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="audio-currentTime-Bar" style="width: {{currentWidth + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  <!-- 底部控制播放区域 -->
+  <view class="musicControl">
+    <text style="color:{{playModel===2?'#f94343':''}}" class="iconfont icon-suijibofang" data-id="{{2}}" bindtap="chooseModel"></text>
+
+    <text class="iconfont icon-shangyishou_huaban" id="pre" bindtap="handleSwitch"></text>
+
+    <text class="iconfont {{isPlay?'icon-zanting': 'icon-icon-'}} big" bindtap="handleMusicPlay"></text>
+
+    <text class="iconfont icon-xiayishou_huaban" id="next" bindtap="handleSwitch"></text>
+    <text style="color:{{playModel===1?'#f94343':''}}" class="iconfont icon-hanhan-01-01" data-id="{{1}}" bindtap="chooseModel"></text>
+    <text style="color:{{playModel===0?'#f94343':''}}" data-id="{{0}}" class="iconfont icon-shunxubofang" bindtap="chooseModel"></text>
+  </view>
+</view>

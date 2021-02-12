@@ -61,6 +61,12 @@ Page({
       })
     }
   },
+  // 前往每日推荐
+  ToRecommend(){
+    wx.navigateTo({
+      url: '/pages/eDRecommend/eDRecommend',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

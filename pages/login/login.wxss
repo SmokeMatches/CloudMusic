@@ -1,4 +1,4 @@
-/* pages/login/login.wxss */.wrapper{
+.wrapper{
   position:relative;
   z-index: 90;
   padding-bottom: 40rpx;

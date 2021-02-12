@@ -11,7 +11,7 @@
     </view>
 
     <view class="vip-card-box">
-      <image class="card-bg" src="/images/xl.png" mode=""></image>
+      <image class="card-bg" src="" mode=""></image>
       <view class="b-btn">
         立即开通
       </view>
@@ -33,7 +33,7 @@
       bindtouchend="handleTouchEnd"
       style="transform: {{coverTransform}}; transition: {{coveTransition}}"
   >
-    <image class="arc" src="/images/xl.png"></image>
+    <image class="arc" src=""></image>
     <!-- 个人中心导航 -->
     <view class="nav-section">
       <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
