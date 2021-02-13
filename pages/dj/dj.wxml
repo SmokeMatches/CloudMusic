@@ -1,0 +1,24 @@
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="/images/videlogo.png"></image>
+    <view class="search">
+     发现电台
+    </view>
+    <image src="/images/cloudmusic.png"></image>
+  </view>
+
+  <scroll-view
+      scroll-y
+      class="videoScroll"
+      refresher-enabled
+      bindrefresherrefresh="handleRefresher"
+  >
+    <view class="videoItem" wx:for="{{djList}}" wx:key="index">
+
+      <!-- 性能优化：使用image图片代替video标签 -->
+      <text>{{item.mainSong.name}}</text>
+      <image  id="{{item.mainSong.name}}" class="common" src="{{item.dj.avatarUrl}}"></image>
+    </view>
+  </scroll-view>
+</view>

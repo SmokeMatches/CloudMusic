@@ -1,5 +1,6 @@
 // pages/index/index.js
 import {request} from '../../utils/util'
+let itm =[]
 Page({
 
   /**
@@ -8,14 +9,16 @@ Page({
   data: {
     bannerList:[],
     recommendList:[],
-    topList:[]
+    topList:[],
+    value:'',
+    hidemodelIpt:true,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    itm = wx.getStorageSync('songList')
   },
 
   /**
@@ -65,6 +68,62 @@ Page({
   ToRecommend(){
     wx.navigateTo({
       url: '/pages/eDRecommend/eDRecommend',
+    })
+  },
+  // 前往电台
+  toDj(){
+    wx.navigateTo({
+      url: '/pages/dj/dj',
+    })
+  },
+  // 显示歌单
+  ShowSongList(){
+    let that = this
+    this.setData({
+      value:''
+    })
+    wx.showActionSheet({
+      itemList:itm,
+      success (res) {
+        that.setData({
+          value:''
+        })
+        if(res.tapIndex===itm.length-1){
+          that.setData({
+            hidemodelIpt:false
+          })
+        }else{
+          console.log(res.tapIndex);
+        }
+      },
+      fail (res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+  // 隐藏模态框
+  modalinput(){
+    this.setData({
+      hidemodelIpt:true
+    })
+    this.ShowSongList()
+  },
+  // 新建歌单
+  confirm(){
+    if(this.data.value){
+      itm.unshift(this.data.value)
+      itm = Array.from(new Set(itm))
+      wx.setStorageSync('songList', itm)
+      this.setData({
+        hidemodelIpt:true
+      })
+      this.ShowSongList()
+    }
+  },
+  // 添加歌单
+  addSong(e){
+    this.setData({
+      value:e.detail.value
     })
   },
   /**

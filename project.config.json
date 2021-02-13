@@ -71,8 +71,8 @@
           "scene": null
         },
         {
-          "name": "pages/eDRecommend/eDRecommend",
-          "pathName": "pages/eDRecommend/eDRecommend",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         }

@@ -1,6 +1,9 @@
 // app.js
 App({
   onLaunch() {
+
+    wx.setStorageSync('songList',this.globalData.songList)
+
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -36,6 +39,7 @@ App({
   globalData: {
     IsMusicPlay:false,
     musicId:'',
-    model:0
+    model:0,
+    songList:['我的喜欢','新建歌单']
   }
 })
